@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="courseName" id="courseName">
+        <option value="select a course">select a course</option>
+    </select>
+
+
+    <!-- Make a Dynamic List for selection-->
+
+
+
+</body>
+<script src="jquery-csv.js"></script>
+<script src="/node_modules/jquery-csv/src/jquery.csv.js"></script>
+<script>
+    var csv = require('./jquery.csv.js');
+    var Subjects = $.csv.toArray('./CourseNames.csv');
+    var select = document.getElementById('courseName');
+
+    for (var i = 0; i < Subjects.length; i++) {
+        var option = document.createElement('OPTION');
+        var txt = document.createTextNode(Subjects[i]);
+        option.append(txt);
+        select.insertBefore(option, select.lastChild);
+    }
+</script>
+
+</html>
