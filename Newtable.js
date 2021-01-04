@@ -69,8 +69,8 @@ $(document).ready(function() {
     </tbody>
 </table>
 <p></p>
-<input type="submit" id="add_row" class="btn btn-primary btn-lg pull-left" value="Add Course">
-<input type="submit" id="remove_row" value="Remove Course">
+<input type="submit" id="add_row" class="add_row" value="Add Course">
+            <input type="submit" id="remove_row" class="remove_row" value="Remove Course">
 
 <h2>sem GPA:</h2>
 <h2>sem Credits:</h2>

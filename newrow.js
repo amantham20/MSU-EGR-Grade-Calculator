@@ -6,7 +6,7 @@ $(document).ready(function() {
     })
 
 
-    $("#add_row").click(function() {
+    $(".add_row").click(function() {
         i++;
         $('tbody')[0].insertAdjacentHTML('beforeend', `      
           <tr id="nmr${i}">
@@ -30,25 +30,26 @@ $(document).ready(function() {
                   </select>
                     </td>
                     <td>
-                        <select name="GPA" id="gpa" class="form-control">
-                            <option value="select a course">4.0</option>
-                            <option value="select a course">3.5</option>
-                            <option value="select a course">3.0</option>
-                            <option value="select a course">2.5</option>
-                            <option value="select a course">2.0</option>
-                            <option value="select a course">1.5</option>
-                            <option value="select a course">1.0</option>
-                            <option value="select a course">0.0</option>
-                        </select>
-                    </td>
-                    <td>
-                        <select name="Credits" id="credits" class="form-control">
-                            <option value="select a course">4</option>
-                            <option value="select a course">3</option>
-                            <option value="select a course">2</option>
-                            <option value="select a course">1</option>
-                        </select>
-                    </td>
+                    <select name="GPA" id="gpa" class="form-control">
+                    <option value="select a course" data-gpaValue="4.0">4.0</option>
+                    <option value="select a course" data-gpaValue="3.5">3.5</option>
+                    <option value="select a course" data-gpaValue="3.0">3.0</option>
+                    <option value="select a course" data-gpaValue="2.5">2.5</option>
+                    <option value="select a course" data-gpaValue="2.0">2.0</option>
+                    <option value="select a course" data-gpaValue="1.0">1.5</option>
+                    <option value="select a course" data-gpaValue="1.0">1.0</option>
+                    <option value="select a course" data-gpaValue="0.0">0.0</option>
+                </select>
+                </td>
+                <td>
+                    <select name="Credits" id="credits" class="form-control">
+                    <option value="select a course" data-creditValue="4">4</option>
+                    <option value="select a course" data-creditValue="3">3</option>
+                    <option value="select a course" data-creditValue="2">2</option>
+                    <option value="select a course" data-creditValue="1">1</option>
+                    <option value="select a course" data-creditValue="0">NC</option>
+                </select>
+                </td>
                 </tr>`);
     });
 });
