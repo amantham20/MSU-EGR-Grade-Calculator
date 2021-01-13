@@ -5,6 +5,8 @@ $(document).ready(function() {
         t--;
     })
 
+
+
     $("#add_sem").click(function() {
         t++;
         $(".Semesters")[0].insertAdjacentHTML('beforeend',

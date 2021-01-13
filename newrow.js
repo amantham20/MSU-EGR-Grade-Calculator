@@ -3,7 +3,18 @@ $(document).ready(function() {
     $("#remove_row").click(function() {
         $("tbody tr")[i].remove();
         i--;
-    })
+    });
+
+    // $(".rowDel").click(function() {
+    //     var a = $(".rowDel").id;
+    //     $("tbody tr ").remove();
+
+    // });
+
+    function deleteThisBidi(r) {
+        $("tbody tr #" + r).remove();
+    }
+
 
 
     $(".add_row").click(function() {
@@ -50,6 +61,11 @@ $(document).ready(function() {
                     <option value="select a course" data-creditValue="0">NC</option>
                 </select>
                 </td>
+                <td>
+                 
+                 <button id="rowDel${i+1}" onClick="deleteThisBidi(this.id)" class="rowDel">delete</button>
+            </td>
                 </tr>`);
+        //<input type="submit" id="rowDel${i+1}" onClick="deleteThisBidi(this.id)" class="rowDel" value="Delete">
     });
 });
