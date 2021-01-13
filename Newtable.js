@@ -66,6 +66,9 @@ $(document).ready(function() {
                 <option value="select a course">1</option>
             </select>
             </td>
+            <td>
+                            <button id="rowDel0" onClick="deleteThisBidi(this.id)" class="rowDel">delete</button>
+                        </td>
         </tr>
 
     </tbody>
